@@ -1,13 +1,12 @@
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 function App() {
   return (
     <div className="bg-black">
       <Navbar />
 
-      <section id="home" className="min-h-screen flex items-center justify-center">
-        <h1 className="text-white text-5xl">Home Section</h1>
-      </section>
+      <Hero />
 
       <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900">
         <h1 className="text-white text-5xl">About Section</h1>
