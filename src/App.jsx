@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -14,9 +15,7 @@ function App() {
 
       <Projects />
 
-      <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-900">
-        <h1 className="text-white text-5xl">Contact Section</h1>
-      </section>
+      <Contact />
     </div>
   )
 }
