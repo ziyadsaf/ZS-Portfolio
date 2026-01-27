@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
 
       <Hero />
 
-      <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900">
-        <h1 className="text-white text-5xl">About Section</h1>
-      </section>
+      <About />
 
       <section id="projects" className="min-h-screen flex items-center justify-center">
         <h1 className="text-white text-5xl">Projects Section</h1>
