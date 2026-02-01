@@ -28,51 +28,62 @@ function About() {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
+        {/* Profile Photo */}
+        <motion.div
+          className="flex justify-center mb-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="/profile.jpg"
+            alt="Ziyad Safouane"
+            className="w-40 h-40 rounded-full object-cover border-4 border-[#2193b0] shadow-lg shadow-[#2193b0]/30"
+          />
+        </motion.div>
+
         {/* Title animates in when scrolled into view */}
         <motion.h2
-          className="text-4xl font-bold text-white mb-8 text-center"
+          className="text-4xl font-bold text-white text-center"
+          style={{ marginBottom: '40px' }}
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}  // Triggers when scrolled into view
-          viewport={{ once: false }}  // Animation happens only once
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           About Me
         </motion.h2>
-        <br></br>
 
         {/* Container for paragraphs with stagger effect */}
         <motion.div
-          className="text-gray-300 space-y-6"
+          className="text-gray-300"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
         >
-          {/* Each paragraph animates in sequence */}
-          <motion.p className="text-lg" variants={itemVariants}>
+          <motion.p className="text-lg" style={{ marginBottom: '20px' }} variants={itemVariants}>
             I'm a software engineer currently working as an AI Expert at Amazon AGI in Cambridge.
           </motion.p>
-          <br></br>
 
-          <motion.p className="text-lg" variants={itemVariants}>
+          <motion.p className="text-lg" style={{ marginBottom: '20px' }} variants={itemVariants}>
             I graduated with a First-Class Honours in Computer Science from the University of Kent.
           </motion.p>
-          <br></br>
 
-          <motion.p className="text-lg" variants={itemVariants}>
+          <motion.p className="text-lg" style={{ marginBottom: '40px' }} variants={itemVariants}>
             My experience spans backend development, cloud infrastructure, and AI/ML systems.
           </motion.p>
-          <br></br>
 
           {/* Skills section */}
-          <div className="mt-8">
+          <div>
             <motion.h3
-              className="text-2xl font-semibold text-white mb-4"
+              className="text-2xl font-semibold text-white"
+              style={{ marginBottom: '20px' }}
               variants={itemVariants}
             >
               Skills & Technologies
             </motion.h3>
-            <br></br>
 
             {/* Skills badges container with stagger animation */}
             <motion.div
@@ -82,7 +93,6 @@ function About() {
               whileInView="visible"
               viewport={{ once: false }}
             >
-              {/* Each badge animates in with scale effect */}
               {['Python', 'SQL', 'Java', 'AWS', 'Azure', 'Linux', 'Docker', 'Git'].map((skill) => (
                 <motion.span
                   key={skill}
@@ -99,7 +109,7 @@ function About() {
         {/* CV Download Button - centered at bottom */}
         <motion.div
           className="flex justify-center"
-          style={{ marginTop: '50px' }}
+          style={{ marginTop: '40px', marginBottom: '60px' }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -108,7 +118,7 @@ function About() {
           <motion.a
             href="/Ziyad Safouane CV.pdf"
             download
-            className="flex flex-col items-center justify-center w-32 h-32 bg-gradient-to-br from-[#2193b0] to-[#6dd5ed] text-white rounded-xl hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"
+            className="flex flex-col items-center justify-center w-28 h-28 bg-gradient-to-br from-[#2193b0] to-[#6dd5ed] text-white rounded-xl hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
