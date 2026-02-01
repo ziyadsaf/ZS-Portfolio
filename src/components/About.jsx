@@ -1,38 +1,99 @@
+import { motion } from 'framer-motion';
+
 function About() {
+  // Container animation - controls when child elements start animating
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2  // Delay between each child animation
+      }
+    }
+  };
+
+  // Individual item animation - for paragraphs
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  // Badge animation - for skill badges
+  const badgeVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 }
+  };
+
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 py-20">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-white mb-8 text-center">About Me</h2>
+        {/* Title animates in when scrolled into view */}
+        <motion.h2
+          className="text-4xl font-bold text-white mb-8 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}  // Triggers when scrolled into view
+          viewport={{ once: true }}  // Animation happens only once
+          transition={{ duration: 0.6 }}
+        >
+          About Me
+        </motion.h2>
         <br></br>
 
-        <div className="text-gray-300 space-y-6">
-          <p className="text-lg">
+        {/* Container for paragraphs with stagger effect */}
+        <motion.div
+          className="text-gray-300 space-y-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Each paragraph animates in sequence */}
+          <motion.p className="text-lg" variants={itemVariants}>
             I'm a software engineer currently working as an AI Expert at Amazon AGI in Cambridge.
-          </p>
+          </motion.p>
           <br></br>
-          <p className="text-lg">
+
+          <motion.p className="text-lg" variants={itemVariants}>
             I graduated with a First-Class Honours in Computer Science from the University of Kent.
-          </p>
+          </motion.p>
           <br></br>
-          <p className="text-lg">
+
+          <motion.p className="text-lg" variants={itemVariants}>
             My experience spans backend development, cloud infrastructure, and AI/ML systems.
-          </p>
+          </motion.p>
           <br></br>
+
+          {/* Skills section */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-white mb-4">Skills & Technologies</h3>
+            <motion.h3
+              className="text-2xl font-semibold text-white mb-4"
+              variants={itemVariants}
+            >
+              Skills & Technologies
+            </motion.h3>
             <br></br>
-            <div className="flex flex-wrap gap-3">
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Python</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">SQL</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Java</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">AWS</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Azure</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Linux</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Docker</span>
-              <span className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded">Git</span>
-            </div>
+
+            {/* Skills badges container with stagger animation */}
+            <motion.div
+              className="flex flex-wrap gap-3"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {/* Each badge animates in with scale effect */}
+              {['Python', 'SQL', 'Java', 'AWS', 'Azure', 'Linux', 'Docker', 'Git'].map((skill) => (
+                <motion.span
+                  key={skill}
+                  className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors"
+                  variants={badgeVariants}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
