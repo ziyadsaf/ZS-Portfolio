@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown, FaDownload } from 'react-icons/fa';
 
 function About() {
   // Container animation - controls when child elements start animating
@@ -26,14 +26,14 @@ function About() {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 py-20 relative">
+    <section id="about" className="min-h-screen flex items-center justify-center py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
         {/* Title animates in when scrolled into view */}
         <motion.h2
           className="text-4xl font-bold text-white mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}  // Triggers when scrolled into view
-          viewport={{ once: true }}  // Animation happens only once
+          viewport={{ once: false }}  // Animation happens only once
           transition={{ duration: 0.6 }}
         >
           About Me
@@ -46,7 +46,7 @@ function About() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           {/* Each paragraph animates in sequence */}
           <motion.p className="text-lg" variants={itemVariants}>
@@ -80,7 +80,7 @@ function About() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               {/* Each badge animates in with scale effect */}
               {['Python', 'SQL', 'Java', 'AWS', 'Azure', 'Linux', 'Docker', 'Git'].map((skill) => (
@@ -95,7 +95,29 @@ function About() {
             </motion.div>
           </div>
         </motion.div>
+
+        {/* CV Download Button - centered at bottom */}
+        <motion.div
+          className="flex justify-center"
+          style={{ marginTop: '50px' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <motion.a
+            href="/Ziyad Safouane CV.pdf"
+            download
+            className="flex flex-col items-center justify-center w-32 h-32 bg-gradient-to-br from-[#2193b0] to-[#6dd5ed] text-white rounded-xl hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaDownload size={32} />
+            <span className="mt-2 text-sm font-medium">Download CV</span>
+          </motion.a>
+        </motion.div>
       </div>
+
       {/* Scroll indicator - bouncing arrow at bottom of section */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
