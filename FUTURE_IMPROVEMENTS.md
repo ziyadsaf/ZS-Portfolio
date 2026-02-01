@@ -1,12 +1,12 @@
 # Future Improvements
 
 ## Hero Section
-- [ ] Add animated scroll indicator (bouncing arrow/chevron at bottom of section)
+- [x] Add animated scroll indicator (bouncing arrow/chevron at bottom of section)
 - [ ] Add subtle accent line or decorative element under "Software Engineer" title
 
 ## About Section
 - [ ] Add profile photo
-- [ ] Add CV/resume download button
+- [x] Add CV/resume download button
 - [ ] Add work experience timeline
 - [ ] Add education details with university logo
 
