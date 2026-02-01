@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaChevronDown } from 'react-icons/fa';
 
 function About() {
   // Container animation - controls when child elements start animating
@@ -25,7 +26,7 @@ function About() {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 py-20">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
         {/* Title animates in when scrolled into view */}
         <motion.h2
@@ -95,6 +96,21 @@ function About() {
           </div>
         </motion.div>
       </div>
+      {/* Scroll indicator - bouncing arrow at bottom of section */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: [0, 10, 0] }}
+        viewport={{ once: false }}
+        transition={{
+          opacity: { duration: 0.5 },
+          y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+      >
+        <a href="#projects" className="text-gray-500 hover:text-gray-300 transition-colors">
+          <FaChevronDown size={24} />
+        </a>
+      </motion.div>
     </section>
   );
 }

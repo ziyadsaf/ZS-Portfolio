@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaChevronDown } from 'react-icons/fa';
 import ProjectCard from './ProjectCard';
 
 function Projects() {
@@ -32,14 +33,14 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center bg-black py-20">
+    <section id="projects" className="min-h-screen flex items-center justify-center py-20 relative">
       <div className="max-w-6xl mx-auto px-6 w-full">
         {/* Title animates in when scrolled into view */}
         <motion.h2
           className="text-4xl font-bold text-white mb-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           Projects
@@ -52,7 +53,7 @@ function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           {projects.map((project, index) => (
             <ProjectCard
@@ -64,6 +65,22 @@ function Projects() {
           ))}
         </motion.div>
       </div>
+
+      {/* Scroll indicator - bouncing arrow at bottom of section */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: [0, 10, 0] }}
+        viewport={{ once: false }}
+        transition={{
+          opacity: { duration: 0.5 },
+          y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+      >
+        <a href="#contact" className="text-gray-500 hover:text-gray-300 transition-colors">
+          <FaChevronDown size={24} />
+        </a>
+      </motion.div>
     </section>
   );
 }

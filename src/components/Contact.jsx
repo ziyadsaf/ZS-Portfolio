@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaChevronUp } from 'react-icons/fa';
 
 function Contact() {
   // Container for staggering icon animations
@@ -20,14 +20,14 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-900 py-20">
+    <section id="contact" className="min-h-screen flex items-center justify-center py-20 relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Title animates in when scrolled into view */}
         <motion.h2
           className="text-4xl font-bold text-white mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           Get In Touch
@@ -39,7 +39,7 @@ function Contact() {
           className="text-lg text-gray-300 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Feel free to reach out to me through any of the platforms below.
@@ -52,7 +52,7 @@ function Contact() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           {/* LinkedIn - scales up on hover */}
           <motion.a
@@ -89,6 +89,22 @@ function Contact() {
           </motion.a>
         </motion.div>
       </div>
+
+      {/* Scroll indicator - bouncing arrow to go back to top */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: [0, -10, 0] }}
+        viewport={{ once: false }}
+        transition={{
+          opacity: { duration: 0.5 },
+          y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+        }}
+      >
+        <a href="#home" className="text-gray-500 hover:text-gray-300 transition-colors">
+          <FaChevronUp size={24} />
+        </a>
+      </motion.div>
     </section>
   );
 }
