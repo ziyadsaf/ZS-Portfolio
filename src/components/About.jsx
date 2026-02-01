@@ -108,7 +108,7 @@ function About() {
           <motion.a
             href="/Ziyad Safouane CV.pdf"
             download
-            className="flex flex-col items-center justify-center w-32 h-32 bg-gradient-to-br from-[#2193b0] to-[#6dd5ed] text-white rounded-xl hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"
+            className="flex flex-col items-center justify-center w-32 h-32 bg-gradient-to-br from-[#2193b0] to-[#6dd5ed] text-white rounded-xl hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"hover:shadow-lg hover:shadow-[#6dd5ed]/30 transition-shadow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

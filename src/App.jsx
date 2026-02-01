@@ -6,7 +6,7 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <div className="bg-black">
+   <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#0d2833] via-[#1a4a5e] via-[#0d2833] to-[#0a0a0a]">
       <Navbar />
 
       <Hero />
