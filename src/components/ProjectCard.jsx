@@ -9,7 +9,7 @@ function ProjectCard({ title, description, technologies }) {
 
   return (
     <motion.div
-      className="bg-gray-800 rounded-lg p-6 transition-all hover:bg-gray-750 hover:shadow-xl hover:shadow-indigo-500/20"
+      className="bg-gray-800 rounded-lg p-6 transition-all hover:bg-gray-750 hover:shadow-xl hover:shadow-[#2193b0]/20"
       variants={cardVariants}
       whileHover={{ scale: 1.05 }}  // Card grows slightly on hover
       transition={{ duration: 0.3 }}  // Smooth transition
