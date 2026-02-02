@@ -5,10 +5,10 @@
 - [ ] Add subtle accent line or decorative element under "Software Engineer" title
 
 ## About Section
-- [ ] Add profile photo
+- [x] Add profile photo
 - [x] Add CV/resume download button
-- [ ] Add work experience timeline
-- [ ] Add education details with university logo
+- [x] Add work experience timeline
+- [x] Add education details
 
 ## Projects Section
 - [ ] Add real project content (replace placeholders)
@@ -39,7 +39,7 @@
 - [ ] SEO optimization (meta tags, Open Graph, sitemap)
 - [ ] Performance optimization (lazy loading, code splitting)
 - [ ] Accessibility improvements (ARIA labels, keyboard navigation)
-- [ ] Fix ParticleBackground component
+- [x] Fix ParticleBackground component
 - [ ] Add analytics integration (Google Analytics/Plausible)
 - [ ] Add page loading animation
 - [ ] Deploy to production (Vercel/Netlify/GitHub Pages)
