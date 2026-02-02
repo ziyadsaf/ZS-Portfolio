@@ -93,10 +93,10 @@ function About() {
               whileInView="visible"
               viewport={{ once: false }}
             >
-              {['Python', 'SQL', 'Java', 'AWS', 'Azure', 'Linux', 'Docker', 'Git'].map((skill) => (
+              {['Python', 'SQL', 'Java', 'HTML', 'CSS', 'JavaScript', 'React', 'AWS', 'Azure'].map((skill) => (
                 <motion.span
                   key={skill}
-                  className="px-6 py-3 text-lg bg-gray-800 text-gray-300 rounded hover:bg-gray-700 transition-colors"
+                  className="px-6 py-3 text-lg bg-gradient-to-r from-[#2193b0]/20 to-[#6dd5ed]/20 text-[#6dd5ed] rounded-lg hover:from-[#2193b0]/40 hover:to-[#6dd5ed]/40 hover:text-white transition-all cursor-default"
                   variants={badgeVariants}
                 >
                   {skill}
