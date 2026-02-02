@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaChevronDown, FaDownload } from 'react-icons/fa';
+import { FaChevronDown, FaDownload, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 
 function About() {
   // Container animation - controls when child elements start animating
@@ -103,6 +103,103 @@ function About() {
                 </motion.span>
               ))}
             </motion.div>
+          </div>
+
+          {/* Experience section */}
+          <div style={{ marginTop: '40px' }}>
+            <motion.h3
+              className="text-2xl font-semibold text-white flex items-center gap-3"
+              style={{ marginBottom: '24px' }}
+              variants={itemVariants}
+            >
+              <FaBriefcase className="text-[#2193b0]" />
+              Experience
+            </motion.h3>
+
+            <div style={{ display: 'flex', fexDirection: 'column', gap: '32px' }}>
+              {/* Amazon */}
+              <motion.div
+                className="border-l-2 border-[#2193b0]" style={{ paddingLeft: '20px' }}
+                variants={itemVariants}
+              >
+                <h4 className="text-lg font-semibold text-white">AI Expert – ML Data Services</h4>
+                <p className="text-[#6dd5ed] text-sm">Amazon AGI | Cambridge</p>
+                <p className="text-gray-400 text-sm" style={{ marginBottom: '8px' }}>Sep 2025 - Present</p>
+                <ul className="text-gray-300 text-sm list-disc list-inside space-y-1">
+                  <li>Built Python tooling for automated data processing and LLM evaluation workflows, increasing team throughput by 3x</li>
+                  <li>Developed prompt engineering frameworks and conducted A/B testing to optimise model behaviour</li>
+                  <li>Designed data pipelines handling JSON, JSONL, CSV for large-scale model evaluation</li>
+                  <li>Collaborated with ML researchers and engineers to improve dataset quality</li>
+                </ul>
+              </motion.div>
+
+              {/* Teacher */}
+              <motion.div
+                className="border-l-2 border-[#2193b0]" style={{ paddingLeft: '20px' }}
+                variants={itemVariants}
+              >
+                <h4 className="text-lg font-semibold text-white">Computer Science Teacher</h4>
+                <p className="text-[#6dd5ed] text-sm">Whitgift School, Grey Court School | London</p>
+                <p className="text-gray-400 text-sm" style={{ marginBottom: '8px' }}>Sep 2021 - Sep 2024</p>
+                <ul className="text-gray-300 text-sm list-disc list-inside space-y-1">
+                  <li>Taught OOP in Python, algorithms, and data structures to 100+ students</li>
+                  <li>Integrated LLM-powered educational tools into curriculum</li>
+                  <li>Performed data analysis using Python and Power BI to improve learning outcomes</li>
+                </ul>
+              </motion.div>
+
+              {/* Egress */}
+              <motion.div
+                className="border-l-2 border-[#2193b0]" style={{ paddingLeft: '20px' }}
+                variants={itemVariants}
+              >
+                <h4 className="text-lg font-semibold text-white">IT Operations Engineer</h4>
+                <p className="text-[#6dd5ed] text-sm">Egress Software Technologies | London</p>
+                <p className="text-gray-400 text-sm" style={{ marginBottom: '8px' }}>Jun 2019 - Sep 2020</p>
+                <ul className="text-gray-300 text-sm list-disc list-inside space-y-1">
+                  <li>Wrote Python and Bash automation scripts, reducing manual tasks by 40%</li>
+                  <li>Built SQL-based reporting and analytics systems</li>
+                  <li>Managed Linux systems and Azure cloud infrastructure</li>
+                  <li>Led enterprise network security redesign, presenting to C-Suite</li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Education section */}
+          <div style={{ marginTop: '40px' }}>
+            <motion.h3
+              className="text-2xl font-semibold text-white flex items-center gap-3"
+              style={{ marginBottom: '24px' }}
+              variants={itemVariants}
+            >
+              <FaGraduationCap className="text-[#2193b0]" />
+              Education
+            </motion.h3>
+
+            <div style={{ display: 'flex', gap: '32px' }}>
+              {/* PGCE */}
+              <motion.div
+                className="border-l-2 border-[#2193b0]" style={{ paddingLeft: '20px' }}
+                variants={itemVariants}
+              >
+                <h4 className="text-lg font-semibold text-white">PGCE Computer Science</h4>
+                <p className="text-[#6dd5ed] text-sm">King's College London</p>
+                <p className="text-gray-400 text-sm" style={{ marginBottom: '8px' }}>2021 - 2022</p>
+                <p className="text-gray-300 text-sm">Awarded PGCE with QTS certification • British Computing Society Scholarship</p>
+              </motion.div>
+
+              {/* BSc */}
+              <motion.div
+                className="border-l-2 border-[#2193b0]" style={{ paddingLeft: '20px' }}
+                variants={itemVariants}
+              >
+                <h4 className="text-lg font-semibold text-white">BSc Computer Science</h4>
+                <p className="text-[#6dd5ed] text-sm">University of Kent | Canterbury</p>
+                <p className="text-gray-400 text-sm" style={{ marginBottom: '8px' }}>2017 - 2021</p>
+                <p className="text-gray-300 text-sm">First-Class Honours</p>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
