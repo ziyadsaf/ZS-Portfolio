@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 
-function ProjectCard({ title, description, technologies }) {
+function ProjectCard({ title, description, technologies, github }) {
   // Animation variant for each card - used by parent container's stagger
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -23,11 +24,19 @@ function ProjectCard({ title, description, technologies }) {
           </span>
         ))}
       </div>
-      <div className="mt-4">
-        <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#2193b0]/30 to-[#6dd5ed]/30 text-[#6dd5ed] text-sm rounded-lg">
-          Coming Soon
-        </span>
-      </div>
+      {github && (
+        <div className="mt-4">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#2193b0]/30 to-[#6dd5ed]/30 text-[#6dd5ed] text-sm rounded-lg hover:from-[#2193b0]/50 hover:to-[#6dd5ed]/50 hover:text-white transition-all"
+          >
+            <FaGithub size={16} />
+            View on GitHub
+          </a>
+        </div>
+      )}
     </motion.div>
   );
 }

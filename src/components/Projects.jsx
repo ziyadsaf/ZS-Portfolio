@@ -5,19 +5,22 @@ import ProjectCard from './ProjectCard';
 function Projects() {
   const projects = [
     {
-      title: "Project One",
-      description: "A description of this project will go here.",
-      technologies: []
+      title: "F1 Telemetry Analysis",
+      description: "A Python tool that analyses Formula 1 race data using the FastF1 library. Performs lap performance analysis, models tyre degradation, and generates comparative visualisations of driver performance.",
+      technologies: ["Python", "FastF1", "pandas", "scikit-learn", "matplotlib"],
+      github: "https://github.com/ziyadsaf/F1-telemetry-analysis"
     },
     {
-      title: "Project Two",
-      description: "A description of this project will go here.",
-      technologies: []
+      title: "Movie Success Prediction",
+      description: "A machine learning project that predicts movie revenue using regression techniques, leveraging the TMDB 5000 Movies dataset. Explores budget-revenue correlations and genre trends.",
+      technologies: ["Python", "scikit-learn", "pandas", "seaborn", "Jupyter"],
+      github: "https://github.com/ziyadsaf/movie-success-prediction"
     },
     {
-      title: "Project Three",
-      description: "A description of this project will go here.",
-      technologies: []
+      title: "Quiz-Card",
+      description: "An educational application that enables instructors to create quizzes from CSV files. Automatically generates flashcards from incorrectly answered questions for targeted review.",
+      technologies: ["Python", "SQLite", "CSV", "Tkinter"],
+      github: "https://github.com/ziyadsaf/Quiz-Card"
     }
   ];
 
@@ -61,6 +64,7 @@ function Projects() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              github={project.github}
             />
           ))}
         </motion.div>
