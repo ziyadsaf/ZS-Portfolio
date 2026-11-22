@@ -1,15 +1,297 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ziyad Safouane | Software Engineer</title>
-    <meta name="description" content="Software Engineer specializing in backend development, cloud infrastructure, and AI/ML systems. Currently working at Amazon AGI." />
-    <meta name="author" content="Ziyad Safouane" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ziyad Safouane · AI Evaluation &amp; Safeguards</title>
+  <meta name="description" content="Ziyad Safouane: AI Specialist at Tesla and former LLM evaluation engineer at Amazon AGI. I measure how deployed AI systems fail and build the safeguards and human oversight that keep them in check. Moving into empirical AI safety research.">
+  <meta name="author" content="Ziyad Safouane">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ziyad Safouane · AI Evaluation & Safeguards">
+  <meta property="og:description" content="Evaluating deployed AI systems and building the safeguards, approval gates and fail-closed controls that keep them safe. Moving into empirical AI safety research.">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151514" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5c57'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23fff' text-anchor='middle'%3EZS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Ziyad Safouane</a>
+      <nav aria-label="Sections">
+        <a href="#interests">Research interests</a>
+        <a href="#work">Selected work</a>
+        <a href="#projects">Projects</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Intro -->
+    <section class="hero wrap" id="top">
+      <div class="hero-text">
+        <p class="eyebrow">AI evaluation · safeguards · human oversight</p>
+        <h1>I measure how deployed AI systems fail, and build the controls that keep those failures safe.</h1>
+        <p class="lede">
+          I'm an AI Specialist at <strong>Tesla</strong>, where I own measurement, analysis and the roadmap for the AI products
+          that Tesla Service customers and staff use across EMEA and North America. Before that I built LLM evaluation pipelines
+          at <strong>Amazon AGI</strong> for Amazon Nova and Bedrock. I now want to work full-time on
+          <strong>empirical AI safety research</strong>, especially <em>AI control</em>, <em>safeguards</em> and the
+          <em>evaluation of deployed AI systems</em>.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:ziyad.safouane@gmail.com">Email me</a>
+          <a class="btn" href="https://github.com/ziyadsaf" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/ziyad-safouane/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="assets/ziyad.jpg" width="480" height="480" alt="Portrait of Ziyad Safouane">
+        <figcaption>St Neots, Cambridgeshire · UK</figcaption>
+      </figure>
+    </section>
+
+    <!-- How I work -->
+    <section class="wrap evidence" aria-labelledby="evidence-title">
+      <h2 id="evidence-title" class="label">How I work with deployed AI</h2>
+      <ol class="metrics">
+        <li>
+          <span class="metric-value"><span class="step">1</span>Measure</span>
+          <span class="metric-label">Define metrics from real user behaviour, not just offline benchmarks</span>
+        </li>
+        <li>
+          <span class="metric-value"><span class="step">2</span>Diagnose</span>
+          <span class="metric-label">Find failure modes in what people correct, delete or escalate</span>
+        </li>
+        <li>
+          <span class="metric-value"><span class="step">3</span>Safeguard</span>
+          <span class="metric-label">Add guardrails and fail-closed switches so failures are silent, not wrong</span>
+        </li>
+        <li>
+          <span class="metric-value"><span class="step">4</span>Oversee</span>
+          <span class="metric-label">Gate consequential agent actions behind risk checks and human approval</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Research interests -->
+    <section class="wrap section" id="interests" aria-labelledby="interests-title">
+      <div class="section-head">
+        <p class="kicker">01</p>
+        <h2 id="interests-title">Research interests</h2>
+        <p class="section-intro">
+          Every question below came out of shipping AI to real users. I'd like to study them properly, with frontier models,
+          controlled experiments and results others can build on.
+        </p>
+      </div>
+      <div class="interests">
+        <article class="interest">
+          <p class="tag">AI control</p>
+          <h3>Oversight gates that stay meaningful</h3>
+          <p>I run a multi-agent LLM system where consequential actions go through risk checks and human approval gates.
+            When does a gate actually catch a bad action, and when does approval turn into a formality? How should control
+            protocols for agents be designed so oversight holds up as agents get more capable?</p>
+        </article>
+        <article class="interest">
+          <p class="tag">Scalable oversight</p>
+          <h3>Human edits as an oversight signal</h3>
+          <p>The most useful data I've found for improving AI-drafted text is what its human reviewers delete and rewrite. How far can cheap,
+            implicit signals like edit traces scale as a measure of where a model is ungrounded, and where do they mislead?</p>
+        </article>
+        <article class="interest">
+          <p class="tag">Safeguards</p>
+          <h3>Failing closed under pressure</h3>
+          <p>A customer-facing guardrail is only useful if, when it breaks, the system says nothing rather than something
+            confidently wrong. I want to measure how robust classifiers and kill-switches are under adversarial and
+            out-of-distribution inputs, and how to make their failure modes predictable.</p>
+        </article>
+        <article class="interest">
+          <p class="tag">Evaluation</p>
+          <h3>Evals that predict deployed behaviour</h3>
+          <p>At Amazon AGI I built scoring pipelines across Nova model iterations; at Tesla I watch those models meet real
+            customers. I'm interested in the gap between offline eval scores and behaviour in deployment, and in evals that
+            close it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Selected work -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="kicker">02</p>
+        <h2 id="work-title">Selected work</h2>
+        <p class="section-intro">How I've approached evaluation and safety for AI that's already deployed. Each case follows the same loop: measure, find the failure mode, change the system, measure again.</p>
+        <p class="note">Work for employers is described at a high level to respect confidentiality. I'm happy to discuss specifics where I can.</p>
+      </div>
+
+      <article class="case">
+        <header class="case-head">
+          <p class="case-meta">Tesla · 2026 · Evaluation from human feedback</p>
+          <h3>Grounding AI-generated repair notes</h3>
+        </header>
+        <dl class="case-body">
+          <div><dt>Problem</dt><dd>When AI drafts technicians' repair notes, every edit costs technician time, and a note that doesn't match the repair shouldn't reach a customer.</dd></div>
+          <div><dt>Approach</dt><dd>Treated technicians' edits as labelled data. I analysed what they consistently added and removed, traced each pattern to a cause, and made targeted changes rather than broad prompt rewrites.</dd></div>
+          <div><dt>Result</dt><dd>Edit and deletion rates fell substantially in every region, saving technician time and keeping notes grounded in the actual repair.</dd></div>
+        </dl>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <p class="case-meta">Tesla · 2026 · Safeguards</p>
+          <h3>Guardrailed AI replies to customers</h3>
+        </header>
+        <dl class="case-body">
+          <div><dt>Problem</dt><dd>Letting AI answer more customer messages without letting wrong or harmful replies through.</dd></div>
+          <div><dt>Approach</dt><dd>Worked with developers and stakeholders to put guardrails and fail-closed switches around customer-facing outputs, then found new message types where the AI could reply safely and decisions that should go to a human advisor.</dd></div>
+          <div><dt>Result</dt><dd>Significantly more messages answered automatically, with faster first responses, and AI replies still trusted.</dd></div>
+        </dl>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <p class="case-meta">Tesla · 2026 · AI control in practice</p>
+          <h3>Agent systems with human approval gates</h3>
+        </header>
+        <dl class="case-body">
+          <div><dt>System</dt><dd>Designed and run a multi-agent LLM system for monitoring, reporting and drafting. Agent actions go through risk checks and human approval gates before they take effect.</dd></div>
+          <div><dt>Also</dt><dd>Lead the use of AI agents to simulate service workflows, and work on making voice AI more autonomous and consistent with written channels.</dd></div>
+          <div><dt>Why it matters</dt><dd>This is AI control in production: deciding which actions an agent may take alone, which need a human, and how to tell the difference.</dd></div>
+        </dl>
+      </article>
+
+      <article class="case">
+        <header class="case-head">
+          <p class="case-meta">Amazon AGI · 2025–26 · LLM evaluation</p>
+          <h3>Evaluation pipelines for Amazon Nova</h3>
+        </header>
+        <dl class="case-body">
+          <div><dt>Built</dt><dd>Prompt evaluation and scoring frameworks that measure LLM output quality, consistency and safety at scale. Python pipelines for Amazon Nova and Bedrock supported large-scale scoring across model iterations.</dd></div>
+          <div><dt>Found</dt><dd>RAG workflows that assess retrieval accuracy and generation quality, surfacing failure modes to model teams. Reliability checks for data-quality issues, anomalies and edge cases that affected model performance.</dd></div>
+          <div><dt>Also</dt><dd>Prepared fine-tuning data and evaluated fine-tuned outputs. Ran everything in containerised Docker/Linux environments for reproducibility, and documented pipeline architecture, data schemas and AI quality risks for responsible-AI governance.</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <!-- Projects -->
+    <section class="wrap section" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <p class="kicker">03</p>
+        <h2 id="projects-title">Projects</h2>
+        <p class="section-intro">Things I build outside work, mostly to learn a new stack quickly and end to end.</p>
+      </div>
+      <div class="projects">
+        <a class="project" href="https://github.com/ziyadsaf/wavelength" target="_blank" rel="noopener">
+          <h3>Wavelength <span aria-hidden="true">↗</span></h3>
+          <p>A social music app with a FastAPI + SQLAlchemy backend, a Reflex frontend and an Expo mobile client. It includes a Spotify OAuth flow, a weighted artist-overlap compatibility score, and session-token auth that derives the acting user server-side to close an account-takeover gap.</p>
+          <p class="stack">Python · FastAPI · Postgres · TypeScript</p>
+        </a>
+        <a class="project" href="https://github.com/ziyadsaf/F1-telemetry-analysis" target="_blank" rel="noopener">
+          <h3>F1 telemetry analysis <span aria-hidden="true">↗</span></h3>
+          <p>Loads real Formula 1 session data, breaks down lap and sector performance, models tyre degradation and lap-time trends, and plots driver telemetry from the command line.</p>
+          <p class="stack">Python · pandas · scikit-learn · matplotlib</p>
+        </a>
+        <a class="project" href="https://github.com/ziyadsaf/movie-success-prediction" target="_blank" rel="noopener">
+          <h3>Movie success prediction <span aria-hidden="true">↗</span></h3>
+          <p>An end-to-end regression study on the TMDB 5000 dataset: cleaning, exploratory analysis, log-transformed features and model comparison using RMSE and R².</p>
+          <p class="stack">Python · scikit-learn · Jupyter</p>
+        </a>
+        <a class="project" href="https://github.com/ziyadsaf/duo-ai" target="_blank" rel="noopener">
+          <h3>DuoAI <span class="pill">in progress</span> <span aria-hidden="true">↗</span></h3>
+          <p>A shared AI planner for couples, designed private-by-default. It uses row-level security on every table, model calls only from server-side edge functions, and keeps secrets out of the client bundle.</p>
+          <p class="stack">TypeScript · React Native · Supabase</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section class="wrap section" id="background" aria-labelledby="background-title">
+      <div class="section-head">
+        <p class="kicker">04</p>
+        <h2 id="background-title">Background</h2>
+        <p class="section-intro">
+          A mix of infrastructure engineering, four years of teaching and over a year in applied AI. Teaching is where I learned
+          to explain technical work clearly, whether to engineers, leaders or someone seeing the idea for the first time.
+        </p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <p class="when">May 2026 – now</p>
+          <div>
+            <h3>AI Specialist, AI Enablement (Service) · Tesla</h3>
+            <p>Measurement, analysis and roadmap for customer- and staff-facing AI across EMEA and NA: repair notes, in-app messaging, voice AI and agent systems.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">Sep 2025 – May 2026</p>
+          <div>
+            <h3>AI Expert, LLM Evaluation Systems · Amazon AGI</h3>
+            <p>Evaluation and scoring frameworks, RAG assessment, data reliability and fine-tuning data for Amazon Nova and Bedrock.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">Sep 2021 – Sep 2025</p>
+          <div>
+            <h3>Computer Science Teacher · Whitgift School, Grey Court School</h3>
+            <p>Taught algorithms, object-oriented design and data-driven problem solving. Built Python tools to automate reporting, and used LLMs to speed up resource creation.</p>
+          </div>
+        </li>
+        <li>
+          <p class="when">Jun 2019 – Sep 2020</p>
+          <div>
+            <h3>Software Engineer · Egress Software Technologies</h3>
+            <p>Built company-wide Azure environments with Terraform, automated operations with Python and Bash, and led a near-zero-downtime migration to remote infrastructure during COVID-19.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="education">
+        <div>
+          <p class="when">2017 – 2021</p>
+          <h3>BSc Computer Science, First Class Honours</h3>
+          <p>University of Kent</p>
+        </div>
+        <div>
+          <p class="when">2021 – 2022</p>
+          <h3>PGCE Computer Science, BCS Scholar</h3>
+          <p>King's College London</p>
+        </div>
+      </div>
+      <div class="skills">
+        <div><h3>Safety &amp; evaluation</h3><p>LLM evaluation and scoring, failure-mode and hallucination detection, guardrail design, human-in-the-loop approval and risk controls, fine-tuning data preparation</p></div>
+        <div><h3>AI systems</h3><p>LLM agents and multi-agent systems, voice and conversational AI, RAG, prompt engineering, Amazon Nova and Bedrock</p></div>
+        <div><h3>Engineering</h3><p>Python (pandas, NumPy, scikit-learn, FastAPI, SQLAlchemy), SQL, Bash, Java, Docker, Linux, AWS, Azure, Terraform, CI/CD</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="wrap section contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>I'm happy to talk about AI control, evaluations, or what deploying AI to real customers teaches you about safety.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:ziyad.safouane@gmail.com">ziyad.safouane@gmail.com</a>
+        <a class="btn" href="https://github.com/ziyadsaf" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/ziyad-safouane/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>© <span id="year">2026</span> Ziyad Safouane</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
 </html>

@@ -1,7 +1,4 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+// Static single-page site: Vite only bundles and fingerprints the assets.
+export default defineConfig({})
